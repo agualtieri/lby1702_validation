@@ -1,0 +1,43 @@
+### Libya JMMI Validation
+
+rm(list = ls())
+
+library(cleaninginspectoR)
+library(tidyverse)
+library(openxlsx)
+
+today <- Sys.Date()
+
+## Upload data
+data <- read.xlsx("./data/reach_lby_dataset_joint_market_monitoring_initiative_jmmi_December_2020.xlsx", sheet = "Data")
+
+## Issues
+issues <- inspect_all(df = data, uuid.column.name = "_uuid") %>%
+  mutate(uuid= data[.$index,"_uuid",drop=TRUE],city =data[.$index,"q_municipality", drop=TRUE])
+  
+
+### Upload cleaning log and check that the same uuid have been checked
+cleaning_log <- read.xlsx("./data/reach_lby_dataset_joint_market_monitoring_initiative_jmmi_December_2020.xlsx", sheet = "Cleaning Log")
+
+issues2 <- issues[(issues$uuid %in% cleaning_log$UUID),]
+
+write.xlsx(issues2, paste0("./output/cleaning_check_",today,".xlsx"))
+
+### Check MEBS
+data <- data %>% select("q_district", "q_municipality","q_salt_price_per_kilo","q_sugar_price_per_kilo",           
+                        "q_flour_price_per_kilo", "q_rice_price_per_kilo", "q_pasta_price_per_500g", "q_couscous_price_per_kilo",         
+                        "q_tomatop_price_per_400g", "q_chickpeas_price_per_400g", "q_beans_price_per_400g", "q_cmilk_price_per_200ml",          
+                        "q_milk_price_per_liter", "q_gtea_price_per_250g", "q_btea_price_per_250g", "q_oil_price_per_liter",             
+                        "q_tuna_price_per_200g", "q_eggs_price_per_30eggs", "q_chicken_price_per_kilo", "q_lamb_price_per_kilo",            
+                        "q_bread_price_per_5medium_pieces", "q_tomatoes_price_per_kilo", "q_onions_price_per_kilo", "q_pepper_price_per_kilo",           
+                        "q_potatoes_price_per_kilo", "q_hwsoap_price_per_piece", "q_lsoap_price_per_kilo", "q_ldet_price_per_litre",           
+                        "q_shampoo_price_per_250ml", "q_dsoap_price_per_liter", "q_toothpaste_price_per_tube", "q_toothbrush_price_per_brush",      
+                        "q_spads_price_per_10pads", "q_diapers_price_per_30diapers", "q_hsan_price_per_liter", "q_ssan_price_per_liter",            
+                        "q_public_gasoline_price_per_liter", "q_private_gasoline_price_per_liter", "q_paracetamol_price_per_12", "q_Ibuprofen_price_per_20",         
+                        "q_vitamin_b_complex_price_per_40", "q_amoxicillin_price_per_21", "q_metoclopramide_price_per_40", "q_water_price_per_liter",           
+                        "q_fuel_public_price_per_11kg", "q_fuel_private_price_per_11kg", "cooking_fuel_price_per_11kg")
+
+
+## sources
+source("./R/MEB_Alberto.R")
+  

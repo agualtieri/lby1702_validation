@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1574090186797.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3106876924",
+    "id" : "69D0137C",
+    "lastKnownWriteTime" : 1574090074,
+    "last_content_update" : 1574090074,
+    "path" : "~/REACH Yemen/10. Geneva Support/5. Libya/1. LBY1702 - JMMI/R validation/R/jmmi_checks.R",
+    "project_path" : "R/jmmi_checks.R",
+    "properties" : {
+        "cursorPosition" : "13,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

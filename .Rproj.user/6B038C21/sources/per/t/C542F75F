@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1574090166001.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1164324812",
+    "id" : "C542F75F",
+    "lastKnownWriteTime" : 1574090073,
+    "last_content_update" : 1574090073,
+    "path" : "~/REACH Yemen/10. Geneva Support/5. Libya/1. LBY1702 - JMMI/R validation/R/cleaning_log.R",
+    "project_path" : "R/cleaning_log.R",
+    "properties" : {
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

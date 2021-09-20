@@ -1,0 +1,31 @@
+### Libya JMMI Validation
+
+rm(list = ls())
+
+library(cleaninginspectoR)
+library(tidyverse)
+library(readxl)
+
+today <- Sys.Date()
+
+
+## Upload data
+data <- read_xlsx("./data/reach_lby_dataset_joint_market_monitoring_initiative_jmmi_October_2019.xlsx", sheet = "Data")
+
+
+issues <- inspect_all(df = data, uuid.column.name = "uuid") %>%
+  mutate(uuid= data[.$index,"uuid",drop=TRUE],city =data[.$index,"q_municipality", drop=TRUE])
+  
+  
+  write.csv(issues, paste0("./output/cleaning_check_",today,".csv"))
+
+browseURL(paste0("./output/cleaning_check_",today,".csv"))
+
+### Upload cleaning log and check that the same uuid have been checked
+
+cleaning_log <- read_xlsx("./data/reach_lby_dataset_joint_market_monitoring_initiative_jmmi_October_2019.xlsx", sheet = "Cleaning Log")
+
+issues <- issues[(issues$uuid %in% cleaning_log$UUID),]
+
+
+  

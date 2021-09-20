@@ -1,0 +1,32 @@
+{
+    "id": "EE003C78",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1608448347518.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "expression": "cities.meb",
+        "caption": "cities.meb",
+        "totalObservations": 33,
+        "displayedObservations": 33,
+        "variables": 2,
+        "cacheKey": "9AEFB83B",
+        "object": "cities.meb",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=cities.meb&cache_key=9AEFB83B&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 6874009710792503586,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1608448347518,
+    "read_only": false,
+    "read_only_alternatives": []
+}

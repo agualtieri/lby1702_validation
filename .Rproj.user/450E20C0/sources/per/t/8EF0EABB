@@ -1,0 +1,32 @@
+{
+    "id": "8EF0EABB",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1608448201206.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "expression": "issues2",
+        "caption": "issues2",
+        "totalObservations": 13,
+        "displayedObservations": 13,
+        "variables": 6,
+        "cacheKey": "B3A6FCC6",
+        "object": "issues2",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=issues2&cache_key=B3A6FCC6&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1608448179,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1608448201206,
+    "read_only": false,
+    "read_only_alternatives": []
+}
